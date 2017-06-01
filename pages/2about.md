@@ -5,6 +5,9 @@ permalink: /about/
 icon: glyphicon-heart
 ---
 
+### 关于本文
+> 博客框架为copy Haoyang；使用github代码管理晚，使学生时代很多有意思，好玩的东西没能保留下来，再接再厉，与博文一起成长；
+'''
 ### 关于我
 
 > 2015年我将步入找工作的大潮，希望做一个前端开发工程师。   
@@ -22,6 +25,7 @@ icon: glyphicon-heart
 ---
 
 ### 联系我
+
 
 * email：[gaohaoyang126@126.com](mailto:{{ site.email }})
 * QQ：793940046
@@ -60,3 +64,5 @@ Comment below to exchange link with me.
 ---
 
 只要有空一定会更新的！
+
+'''
