@@ -22,4 +22,4 @@ markdown: kramdown
 # highlighter: rouge
 # highlighter: false
 
-theme: jekyll-theme-slate
+theme: jekyll-theme-hacker
