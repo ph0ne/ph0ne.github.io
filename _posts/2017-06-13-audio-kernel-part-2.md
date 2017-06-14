@@ -16,13 +16,9 @@ tags: alsa linux audio
 
 ②pcmC*D*p/c  23个cpm，C*  card;D* device;p/c p：play back（播放）c：capture（录音）；
 
-很简单对吧，直接调用这个方法，传入文件名和文件内容，程序新建 a 标签，新建 Blob 对象，将文件名赋给 a 标签，同时将 Blob 对象作为 Url 也赋给 a 标签，模拟点击事件，自动下载成功，最后再回收内存。下面我们来看看具体是怎么操作的。
 
 
 
-
-
-![](https://img.alicdn.com/tfs/TB16.GnOpXXXXXdapXXXXXXXXXX-307-134.png)
 
 
 ```
