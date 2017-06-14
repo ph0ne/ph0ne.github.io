@@ -19,8 +19,7 @@ author: CpJ
 
 ②pcmC*D*p/c  23个cpm，C*  card;D* device;p/c p：play back（播放）c：capture（录音）；
 
-
-
+---
 
 
 
