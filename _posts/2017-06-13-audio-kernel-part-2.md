@@ -12,39 +12,9 @@ tags: alsa linux audio
 
 # 一：alsa kernel部分主要提供两个东西 #
 
-①controlC* 一般只有controlC0
-
-②pcmC*D*p/c  23个cpm，C*  card;D* device;p/c p：play back（播放）c：capture（录音）；
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+> 01:controlc* 一般只有controlc0
+> 
+> 02:pcmc*d*p/c  23个cpm，c*  card;d* device;p/c p：play back（播放）c：capture（录音）；
 
 
 
