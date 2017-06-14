@@ -4,18 +4,11 @@ title:  "音频kernel部分[架构二]"
 date:   2017-04-16 01:14:54
 categories: ALSA
 tags: alsa linux audio
-author: CpJ
 ---
 
 * content
 {:toc}
 
-
-
-
-
-
-![](http://i.imgur.com/7UL9cVJ.png)
 
 # 一：alsa kernel部分主要提供两个东西 #
 
@@ -23,9 +16,16 @@ author: CpJ
 
 ②pcmC*D*p/c  23个cpm，C*  card;D* device;p/c p：play back（播放）c：capture（录音）；
 
----
+很简单对吧，直接调用这个方法，传入文件名和文件内容，程序新建 a 标签，新建 Blob 对象，将文件名赋给 a 标签，同时将 Blob 对象作为 Url 也赋给 a 标签，模拟点击事件，自动下载成功，最后再回收内存。下面我们来看看具体是怎么操作的。
 
-```js
+
+
+
+
+![](https://img.alicdn.com/tfs/TB16.GnOpXXXXXdapXXXXXXXXXX-307-134.png)
+
+
+```
 xxx:/ # cd dev/snd/
 xxx:/dev/snd # ls -l
 total 0
