@@ -24,6 +24,10 @@ author: CpJ
 
 
 
+
+
+
+
 ```
 xxx:/ # cd dev/snd/                                                                                                                       
 xxx:/dev/snd # ls -l
