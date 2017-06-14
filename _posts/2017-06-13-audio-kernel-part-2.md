@@ -14,7 +14,6 @@ author: CpJ
 
 
 
-
 # 一：alsa kernel部分主要提供两个东西 #
 
 ①controlC* 一般只有controlC0
@@ -70,11 +69,6 @@ crw-rw---- 1 system audio  14,   8 2016-12-04 01:03 sequencer2
 crw-rw---- 1 system audio 116,  33 2016-12-04 01:03 timer
 xxx:/dev/snd # 
 ```
-
-
-
-
-
 ---
 
 # 二：kernel部分代码组成 #
