@@ -21,6 +21,37 @@ tags: alsa linux audio
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ```
 xxx:/ # cd dev/snd/
 xxx:/dev/snd # ls -l
