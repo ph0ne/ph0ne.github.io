@@ -11,6 +11,12 @@ author: CpJ
 {:toc}
 
 
+
+
+
+
+
+
 ---
 
 # 一：alsa kernel部分主要提供两个东西 #
@@ -21,14 +27,8 @@ author: CpJ
 
 ---
 
-
-
-
-
-
-
 ```js
-xxx:/ # cd dev/snd/                                                                                                                       
+xxx:/ # cd dev/snd/
 xxx:/dev/snd # ls -l
 total 0
 crw-rw---- 1 system audio  14,  12 2016-12-04 01:03 adsp
@@ -193,7 +193,7 @@ snd_pcm_dev_register
 }
 ,,,
         /* register pcm */
-        err = snd_register_device_for_dev(devtype, pcm->card,                                                                                
+        err = snd_register_device_for_dev(devtype, pcm->card,
                         ¦ pcm->device,
                         ¦ &snd_pcm_f_ops[cidx],
                         ¦ pcm, str, dev);
@@ -204,7 +204,7 @@ snd_pcm_dev_register
 
 在soc/soc-pcm.c中
 ```js
-if (rtd->dai_link->no_pcm) {                                                                                                             
+if (rtd->dai_link->no_pcm) {
         if (playback)
             pcm->streams[SNDRV_PCM_STREAM_PLAYBACK].substream->private_data = rtd; 
         if (capture)
@@ -237,7 +237,7 @@ static int mt6331_codec_probe(struct snd_soc_codec *codec)
 ```
 ；
 ```js
-static const struct snd_kcontrol_new mt6331_snd_controls[] = {                                                                               
+static const struct snd_kcontrol_new mt6331_snd_controls[] = {
     SOC_ENUM_EXT("Audio_Amp_R_Switch", Audio_DL_Enum[0], Audio_AmpR_Get, Audio_AmpR_Set),
     SOC_ENUM_EXT("Audio_Amp_L_Switch", Audio_DL_Enum[1], Audio_AmpL_Get, Audio_AmpL_Set),
     SOC_ENUM_EXT("Voice_Amp_Switch", Audio_DL_Enum[2], Voice_Amp_Get, Voice_Amp_Set),
@@ -388,7 +388,7 @@ static int snd_open(struct inode *inode, struct file *file) //①
 
     if (file->f_op->open)
         err = file->f_op->open(inode, file); //②
-    return err;                                                                                                                              
+    return err;
 }
 
 ```
