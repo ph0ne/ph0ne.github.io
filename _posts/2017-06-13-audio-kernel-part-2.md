@@ -27,7 +27,7 @@ author: CpJ
 
 
 
-```
+```js
 xxx:/ # cd dev/snd/                                                                                                                       
 xxx:/dev/snd # ls -l
 total 0
@@ -133,7 +133,7 @@ xxx:/dev/snd #
 
 soc_probe函数
 
-```
+```js
 static int soc_probe(struct platform_device *pdev)
 {
     struct snd_soc_card *card = platform_get_drvdata(pdev);//（☆②）
@@ -173,7 +173,7 @@ static int soc_probe(struct platform_device *pdev)
 其中：
 
 sound/core/pcm.c
-```
+```js
 snd_pcm_dev_register
 {
 ,,,
@@ -203,7 +203,7 @@ snd_pcm_dev_register
  对于substream：
 
 在soc/soc-pcm.c中
-```
+```js
 if (rtd->dai_link->no_pcm) {                                                                                                             
         if (playback)
             pcm->streams[SNDRV_PCM_STREAM_PLAYBACK].substream->private_data = rtd; 
@@ -222,7 +222,7 @@ if (rtd->dai_link->no_pcm) {
 soc/mediatek/mt_soc_audio_v3/mt_soc_codec_63xx.c
 
 中：
-```
+```js
 static int mt6331_codec_probe(struct snd_soc_codec *codec) 
 
 {
@@ -236,7 +236,7 @@ static int mt6331_codec_probe(struct snd_soc_codec *codec)
 }
 ```
 ；
-```
+```js
 static const struct snd_kcontrol_new mt6331_snd_controls[] = {                                                                               
     SOC_ENUM_EXT("Audio_Amp_R_Switch", Audio_DL_Enum[0], Audio_AmpR_Get, Audio_AmpR_Set),
     SOC_ENUM_EXT("Audio_Amp_L_Switch", Audio_DL_Enum[1], Audio_AmpL_Get, Audio_AmpL_Set),
@@ -260,7 +260,7 @@ static const struct snd_kcontrol_new mt6331_snd_controls[] = {
 ```
 ；
 
-```
+```js
 struct snd_kcontrol_new {
     snd_ctl_elem_iface_t iface;    /* control的类型*/
     unsigned int device;        /* device/client number */
@@ -283,7 +283,7 @@ struct snd_kcontrol_new {
 
 其中：core/control.c
 
-```
+```js
 struct snd_kcontrol *snd_ctl_new1(const struct snd_kcontrol_new *ncontrol,
                 ¦ void *private_data)
 {
@@ -329,7 +329,7 @@ EXPORT_SYMBOL(snd_ctl_new1);
 
  ②对于soc/mediatek/mt_soc_audio_v3/mt_soc_pcm_capture.c中mtk_afe_capture_probe:
 
-```
+```js
 static int mtk_afe_capture_probe(struct snd_soc_platform *platform)
 {
     pr_warn("mtk_afe_capture_probe\n");
@@ -352,7 +352,7 @@ static int mtk_afe_capture_probe(struct snd_soc_platform *platform)
 #  六 调用流程： #
 
 01：sound/core/sound.c 
-```
+```js
 static const struct file_operations snd_fops =
 {
     .owner =    THIS_MODULE,
@@ -361,7 +361,7 @@ static const struct file_operations snd_fops =
 };
 ```
 ；
-```
+```js
 static int snd_open(struct inode *inode, struct file *file) //①
 {
     unsigned int minor = iminor(inode);
