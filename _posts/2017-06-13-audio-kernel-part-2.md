@@ -3,7 +3,8 @@ layout: post
 title:  "音频kernel部分[架构二]"
 date:   2017-04-16 01:14:54
 categories: ALSA
-tags: alsa linux kernel audio
+tags: alsa linux audio
+author: CpJ
 ---
 
 * content
@@ -17,6 +18,11 @@ tags: alsa linux kernel audio
 ①controlC* 一般只有controlC0
 
 ②pcmC*D*p/c  23个cpm，C*  card;D* device;p/c p：play back（播放）c：capture（录音）；
+
+
+
+
+
 
 ```
 xxx:/ # cd dev/snd/                                                                                                                       
