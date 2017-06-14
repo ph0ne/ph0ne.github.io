@@ -15,10 +15,6 @@ author: CpJ
 
 
 
-
-
----
-
 # 一：alsa kernel部分主要提供两个东西 #
 
 ①controlC* 一般只有controlC0
