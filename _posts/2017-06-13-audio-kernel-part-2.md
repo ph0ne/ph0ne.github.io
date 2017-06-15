@@ -10,6 +10,9 @@ tags: alsa linux audio
 {:toc}
 
 
+
+
+
 # 一：alsa kernel部分主要提供两个东西 #
 
 > 01:controlc* 一般只有controlc0
@@ -21,8 +24,7 @@ tags: alsa linux audio
 
 
 
-
-```
+```js
 xxx:/ # cd dev/snd/
 xxx:/dev/snd # ls -l
 total 0
