@@ -12,13 +12,11 @@ tags: alsa linux audio
 
 
 
-
 # 一：alsa kernel部分主要提供两个东西 #
 
 > 01:controlc* 一般只有controlc0
 > 
 > 02:pcmc*d*p/c  23个cpm，c*  card;d* device;p/c p：play back（播放）c：capture（录音）；
-
 
 
 
@@ -323,7 +321,6 @@ EXPORT_SYMBOL(snd_ctl_new1);
 将put，get，等挂载到标准linux snd_kcontrol list;达到系统调用； 
 
  
-
  ②对于soc/mediatek/mt_soc_audio_v3/mt_soc_pcm_capture.c中mtk_afe_capture_probe:
 
 ```js
@@ -343,7 +340,6 @@ static int mtk_afe_capture_probe(struct snd_soc_platform *platform)
 2.Get_Mem_Buffer() 返回snd_dma_buffer*指针
 3.kzalloc mAudioDigitalI2S
 
- 
 ---
 
 #  六 调用流程： #
@@ -397,9 +393,6 @@ sound/core/pcm_native.c :  snd_pcm_open_file ④
 
 sound/core/pcm_native.c :  snd_pcm_open_substream ⑤
 
- 
-
- 
 
 controlc设备雷同
 ![](http://i.imgur.com/uyWmkhj.png)
