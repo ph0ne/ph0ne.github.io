@@ -13,9 +13,27 @@ tags: alsa linux audio
 
 
 
+![](http://i.imgur.com/7UL9cVJ.png)
 
-# 一：alsa kernel部分主要提供两个东西 #
+## 冒泡
 
-> 01:controlc* 一般只有controlc0
-> 
-> 02:pcmc*d*p/c  23个cpm，c*  card;d* device;p/c p：play back（播放）c：capture（录音）；
+```js
+/* buble sort  */
+//冒泡排序总的时间复杂度为O(n*n)。
+void bublesort(int a[],int n)
+{
+	int i,j,k;
+    for(i = 0; i < n; i++)
+    {   
+    ¦   for(j = 0; j < n-i; j++)///* 值比较大的元素沉下去后，只把剩下的元素中的最大值再沉下去就可以啦 */
+    ¦   {
+    ¦   ¦   if(a[j] > a[j+1])///* 把值比较大的元素沉到底 */
+    ¦   ¦   {   
+    ¦   ¦   ¦   k = a[j];
+    ¦   ¦   ¦   a[j] = a[j+1];
+    ¦   ¦   ¦   a[j+1] = k;
+    ¦   ¦   }   
+    ¦   }   
+    }   
+}
+```
