@@ -9,6 +9,11 @@ tags: alsa linux audio
 * content
 {:toc}
 
+
+
+
+
+
 # 一：alsa kernel部分主要提供两个东西 #
 
 01:controlc* 一般只有controlc0
