@@ -13,8 +13,8 @@ tags: alsa linux audio
 
 
 
-<br></br>
-# 一：alsa kernel部分主要提供两个东西 #
+
+## 一：alsa kernel部分主要提供两个东西 ##
 
 01:controlc* 一般只有controlc0
 
@@ -74,11 +74,11 @@ xxx:/dev/snd #
 
 ---
 
-# 二：kernel部分代码组成 #
+## 二：kernel部分代码组成 ##
 
 ![](http://i.imgur.com/dY6wJxP.png)
 
-## 五部分： ##
+**五部分：**
 
 > 01:platform（pcm）: 一般是指某一个SoC平台，比如MT6582, MT6595, MT6752等等，与音频相关的通常包含该SoC中的Clock、FAE、I2S、DMA等等
 > 
@@ -95,7 +95,7 @@ xxx:/dev/snd #
 ---
 
 
-# 三：对pcm，cpu_dai，codec和codec_dai注册流程 #
+## 三：对pcm，cpu_dai，codec和codec_dai注册流程 ##
 
 > 01：pcm：（录音为例）soc/mediatek/mt_soc_audio_v3/mt_soc_pcm_capture.c
 > 
@@ -119,7 +119,7 @@ xxx:/dev/snd #
 
 ---
 
-# 四：machine（注意下面①②③） #
+## 四：machine（注意下面①②③） ##
 
 ①绑定
 
@@ -220,7 +220,7 @@ if (rtd->dai_link->no_pcm) {
 ---
 
 
-# 五 codec，pcm中 probe函数 #
+## 五 codec，pcm中 probe函数 ##
 
 ①对于mt6331_snd_controls:
 
@@ -352,7 +352,7 @@ static int mtk_afe_capture_probe(struct snd_soc_platform *platform)
 
 ---
 
-#  六 调用流程： #
+##  六 调用流程： ##
 
 01：sound/core/sound.c 
 ```js
