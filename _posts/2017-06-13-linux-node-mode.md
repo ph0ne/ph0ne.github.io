@@ -1,13 +1,17 @@
 ---
 layout: post
-title:  "linux设备节点查看方式"
-date:   2017-06-19 20:32:54
-categories: COM
-tags: linux kernel devicenode
+title:  "前端如何写一个精确的倒计时"
+categories: JavaScript
+tags:  countdown JavaScript
+author: HyG
 ---
 
 * content
 {:toc}
+
+
+
+
 
 
 ## 1、主设备号与次设备号的功能 ##
