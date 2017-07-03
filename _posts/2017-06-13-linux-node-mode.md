@@ -17,7 +17,6 @@ tags: linux kernel devicenode
 
 
 
-
 比如说在linux的终端打入命令:
 
 ```
