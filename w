@@ -61,7 +61,7 @@ return 0;
 ```
 //quick sort  this is very classic,the time complexity is O(n*n);
 void quick_sort(int *a, int low, int high)
-{                   
+{               
     int i = low, j = high;
     int temp = a[low];
     if( low >= high )
