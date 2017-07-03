@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "前端如何写一个精确的倒计时"
+title:  "音频kernel部分[架构二]"
 categories: JavaScript
 tags:  countdown JavaScript
 author: HyG
@@ -8,16 +8,8 @@ author: HyG
 
 * content
 {:toc}
-
-
-
-
-
-
 ## 一：alsa kernel部分主要提供两个东西 ##
-
 01:controlc* 一般只有controlc0
-
 02:pcmc*d*p/c  23个cpm，c*  card;d* device;p/c p：play back（播放）c：capture（录音）；
 
 
