@@ -6,55 +6,52 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: CPJ
-brief-intro: Linux Dev Engineer
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://cpjphone.github.io" # the base hostname & protocol for your site
+title: Webjeda cards
+email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  Webjeda Cards is a Bootstrap based jekyll theme for portfolio, photography or any kind of blog.
+  
+  
+  
+baseurl: "/cards" # the subpath of your site, e.g. /blog
+url: "http://webjeda.com" # the base hostname & protocol for your site
 
-permalink: /:year/:month/:day/:title/
+#sidebar
+default-image: webjeda-logo-big.jpg # If there is no featured image in a post then this image will be showed. Also on all pages this image will be showed. Use a 500x250 image.
 
-# other links
-twitter_username:
-facebook_username: 
-github_username: cpjphone
-email: ph_one@outlook.com
-weibo_username: cpjphone
-zhihu_username: 
-linkedIn_username: 
-dribbble_username:
-
-description_footer: 谈笑有鸿儒 往来无白丁 
-
-# comments
-# two ways to comment, only choose one, and use your own short name
-# 两种评论插件，选一个就好了，使用自己的 short_name
-duoshuo_shortname: 
-disqus_shortname: 
-
-# statistic analysis 统计代码
-# 百度统计 id，将统计代码替换为自己的百度统计id，即
-# hm.src = "//hm.baidu.com/hm.js?xxxxxxxxxxxx";
-# xxxxx字符串
-baidu_tongji_id: cf8506e0ef223e57ff6239944e5d46a4
-google_analytics_id: UA-72449510-4 # google 分析追踪id
+#footer
+built-by: webjeda
+copyright:
+   name: webjeda
+   link: 'http://blog.webjeda.com'
 
 # Build settings
 markdown: kramdown
-
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-
-# port
-# port: 1234
-
-# url
-category_dir: category/
-tag_dir: tag/
-
-# excerpt
-excerpt_separator: "\n\n\n\n"
-
-# paginate
-gems: [jekyll-paginate]
+permalink: /:title/
 paginate: 6
+paginate_path: /page:num/
+
+# Tracker
+analytics: UA-83979019-1
+
+# Comments
+disqus-shortname: webjeda-demo
+
+#social
+facebook: http://facebook.com/webjeda
+quora: http://quora.com/sharathdt
+twitter: http://twitter.com/@webjeda
+github: http://github.com/webjeda
+
+#facebook like box
+fb-app-id: 549480635219583
+fb-page-url: https://www.facebook.com/webjeda/
+fb-page-title: webjeda
+
+# Sass style
+sass:
+  style: compressed
+
+# Ruby Gems
+gems: [jekyll-paginate, jekyll-seo-tag]
+
