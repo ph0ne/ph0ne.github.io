@@ -1,65 +1,158 @@
 ---
-layout: default
+layout: home
+main-title: "PHOT&#8226;O&#8226;RAMA"
+subtitle: "Photo Journal"
+description: "Photography and more"
+images:
+ - image_path: /img/slider/home01.jpg
+   gallery-folder: /img/slider/
+ - image_path: /img/slider/home02.jpg
+   gallery-folder: /img/slider/
+ - image_path: /img/slider/home03.jpg
+   gallery-folder: /img/slider/
 ---
 
-<div class="home">
- 
+
+<html class="no-js" lang="en">
+<head>
+	<meta content="charset=utf-8">
+
+<!-- CSS -->
+     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+     <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="{{ site.baseurl }}/css/galleries.css" media="screen" />
+<link rel="stylesheet" href="{{ site.baseurl }}/css/WYSIWYG.css" media="screen" />
+
+
+
+	<!-- Modernizr -->
+  <script src="{{ site.baseurl }}/js/modernizr.js"></script>
+
+
+
   
-    <div class="row pack">
 
-        {% for post in paginator.posts %}   
-            <div class="col-md-4 card">
-                 
-                <div class="panel panel-default">
-                  <div class="panel-body">
-                    <h3 class="panel-title pull-left">{{ post.title | truncate: 25 }}</h3><span class="post-meta pull-right"><small>{{ post.date | date: "%b %-d, %Y" }}</small></span>
-                  </div>
-                  {% if post.img %}
-                  <img width="100%" src="{{site.baseurl}}/images/{{post.img}}" alt="{{post.title}}">
-                  {% else %}
-                  <img width="100%" src="{{site.baseurl}}/images/webjeda-logo-big.jpg" alt="{{site.title}}">
-                  {% endif %}
-                  <div class="panel-body"><small>
-                    {{ post.excerpt | strip_html | strip_newlines | truncate: 160 }}</small>
-                    <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-primary btn-sm pull-right mt10">Read</a>
-                  </div>
-                </div>
-            </div>
-        
-          {% endfor %}
+</head>
 
-    </div> 
-    
-<div class="row">
-    <div class="col-md-4">  </div>
-    <div class="col-md-4">
-        {% if paginator.total_pages > 1 %}
-        <ul class="pagination">
-          {% if paginator.previous_page %}
-            <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a></li>
-          {% else %}
-            <li><span>&laquo; Prev</span></li>
-          {% endif %}
+<body class="fullscreen">
 
-          {% for page in (1..paginator.total_pages) %}
-            {% if page == paginator.page %}
-              <li class="active"><span><em>{{ page }}</em></span></li>
-            {% elsif page == 1 %}
-            <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a></li>
-            {% else %}
-            <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
-            {% endif %}
-          {% endfor %}
+<!-- MAIN CONTENT SECTION  _____________________________________________-->
+	<section id="content" role="main">
+		<div class="wrapper">
 
-          {% if paginator.next_page %}
-            <li><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a></li>
-          {% else %}
-            <li><span >Next &raquo;</span></li>
-          {% endif %}
-          </ul>
-        {% endif %}
+			<!-- WYSIWYG -->
 
-    </div>
-    <div class="col-md-4">  </div>
-</div>
-</div>
+		<div class="position-absolute">
+				<h2 class="big no-margin"><strong>{{ page.main-title }}</strong></h2>
+				<h2>{{ page.subtitle }}</h2> 
+                     <div class="entry-summary">
+							<p>{{ page.description }}</p>
+						</div><br />
+			</div>
+			
+			<div class="gallery fullscreen-gallery kenburns-gallery">
+
+				<canvas id="kenburns"></canvas>
+				
+{% for image in page.images %}  	
+
+				<figure class="gallery-item">
+					<header class='gallery-icon'>
+
+<a href="{{ site.url }}{{ site.baseurl }}{{ image.gallery-folder }}">
+<img src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"></a>
+	
+				</header>	
+				</figure>
+
+{% endfor %}
+
+				</div>
+			<!-- END WYSIWYG -->
+			
+	
+		</div><!-- END .wrapper -->
+		
+	</section>
+
+<div id="footer" role="contentinfo">
+		<ul class="soc-icons">
+
+                 {% if site.facebook_username %}
+			<li>
+   <a href="https://facebook.com/{{ site.facebook_username }}" style="
+color:#dddddd; target="_blank" title="Facebook">
+                       <i class="fa fa-facebook"></i>
+                     </span>
+</a></li>
+    {% endif %}
+ {% if site.twitter_username %}
+			<li>
+   <a href="https://twitter.com/{{ site.twitter_username }}" style="
+color:#dddddd; target="_blank" title="Twitter">
+                       <i class="fa fa-twitter"></i>
+                     </span>
+</a></li>
+    {% endif %}
+                {% if site.instagram_username %}
+			<li>
+   <a href="https://instagram.com/{{ site.instagram_username }}" style="
+color:#dddddd; target="_blank" title="Instagram">
+                       <i class="fa fa-instagram"></i>
+                     </span>
+</a></li>
+    {% endif %}
+                    {% if site.flickr_username %}
+						<li>
+   <a href="https://flickr.com/photos/{{ site.flickr_username }}" style="
+color:#dddddd; target="_blank" title="Flickr">
+              <i class="fa fa-flickr"></i>
+                     </span>
+ </a></li>	
+     {% endif %}
+                    {% if site.deviantart_username %}
+			<li>
+   <a href="http://{{ site.deviantart_username }}.deviantart.com" style="
+color:#dddddd; target="_blank" title="DeviantArt">
+<i class="fa fa-deviantart"></i> </span>
+</a></li>	
+    {% endif %}
+                    {% if site.github_username %}
+                <li>
+   <a href="https://github.com/{{ site.github_username }}" style="
+color:#dddddd; target="_blank" title="Github">
+              <i class="fa fa-github"></i>
+                     </span>
+                   {% endif %}
+<li>
+    <a href="mailto:{{ site.email }}" style="
+color:#dddddd; target="_blank" title="Email">
+              <i class="fa fa-envelope-o"></i></span>
+          </a> </li>
+	
+					
+		</ul>	
+	</div>
+
+  
+<!-- jQuery -->
+  <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+      <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <script src="{{ site.baseurl }}/js/retina.min.js"></script> 
+
+<!-- include mousewheel plugins -->
+<script src="{{ site.baseurl }}/js/jquery.mousewheel.min.js"></script>
+<!-- include gallery cycle plugin -->
+<script src="{{ site.baseurl }}/js/jquery.cycle.min.js"></script>
+<!-- include kenburns plugins -->
+<script src="{{ site.baseurl }}/js/kenburns.min.js"></script>
+<!-- include svg line drawing plugin -->
+<script src="{{ site.baseurl }}/js/jquery.lazylinepainter.min.js"></script>
+<!-- include custom script -->
+<script src="{{ site.baseurl }}/js/scripts.js"></script>
+
+
+       </body>
+    </html>
+

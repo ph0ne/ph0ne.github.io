@@ -1,28 +1,26 @@
----
-layout: compress
---- 
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-  {% include head.html %}
+{% include head.html %}
 
-  <body>
+<head>
+{% if page.url == "/404.html" %}<meta http-equiv="refresh" content="5; url={{ site.baseurl }}/journal" />{% endif %}
+</head>
 
-    {% include header.html %}
+<body>
 
-    <div class="container">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
+    {% include nav.html %}
+
+    {{ content }}
+
+    {% include search.html %}
+
+    {% include newsletter.html %}
 
     {% include footer.html %}
-    
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-  <script src="{{site.baseurl}}/js/bootstrap.min.js"></script>
- {% if site.analytics %}{% include analytics.html %}{% endif %}
-  </body>
+   {% include Scroll_to_Top.html %}  
+
+</body>
 
 </html>
